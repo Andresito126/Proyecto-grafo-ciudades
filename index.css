@@ -1,0 +1,89 @@
+/* Estilos base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.header__title {
+    margin: 0;
+}
+
+/* Mapa */
+.map {
+    width: 100%;
+    height: 300px;
+    background-color: #ddd;
+    margin: 20px 0;
+}
+
+/* Main */
+.main {
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 600px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.main__section {
+    margin-bottom: 20px;
+}
+
+.main__section-title {
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.main__input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.main__button {
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.main__button:hover {
+    background-color: #0056b3;
+}
+
+.main__list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.main__list--places li {
+    background-color: #f9f9f9;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.main__results {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}

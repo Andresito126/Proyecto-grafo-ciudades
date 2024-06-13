@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Mapa de SanCris</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Mapa de rutas San Cristobal de las Casas</h1>
+    </header>
+    <div id="mapa" class="map"></div>
+
+    <main class="main">
+        <!-- vertices-->
+        <section class="main__section main__section--add-place">
+            <h2 class="main__section-title">Añadir lugar</h2>
+            <input type="text" class="main__input main__input--place-name" placeholder="Nombre del Lugar">
+            <button class="main__button main__button--add-place">Añadir lugar</button>
+        </section>
+    
+        <!-- aristas con peso -->
+        <section class="main__section main__section--add-path">
+            <h2 class="main__section-title">Añadir camino</h2>
+            <input type="text" class="main__input main__input--place1" placeholder="Lugar 1">
+            <input type="text" class="main__input main__input--place2" placeholder="Lugar 2">
+            <input type="text" class="main__input main__input--distance" placeholder="Distancia">
+            <button class="main__button main__button--add-path">Añadir camino</button>
+        </section>
+    
+        <!-- dfs-->
+        <section class="main__section main__section--show-places">
+            <h2 class="main__section-title">Lugares añadidos</h2>
+            <ul class="main__list main__list--places"></ul>
+            <input type="text" class="main__input main__input--start-place" placeholder="Lugar de inicio">
+            <button class="main__button main__button--show-places">Mostrar lugares</button>
+        </section>
+    </main>
+    
+    <script src="src/controllers/script.mjs" type="module"></script>
+</body>
+</html>
