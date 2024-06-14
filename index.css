@@ -1,16 +1,15 @@
-/* Estilos base */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #FFCE32;
 }
 
-/* Header */
+                        /* header */
 .header {
     text-align: center;
-    background-color: #007BFF;
-    color: #fff;
+    background-color: #01257D;
+    color: #ffffff;
     padding: 20px 0;
 }
 
@@ -18,20 +17,28 @@ body {
     margin: 0;
 }
 
-/* Mapa */
+            /* img */
 .map {
     width: 100%;
+    max-width: 1920px;
     height: 300px;
-    background-color: #ddd;
-    margin: 20px 0;
+    overflow: hidden;
+
+    position: relative;
 }
 
-/* Main */
+.map img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+            /* nain */
 .main {
     margin: 20px auto;
     padding: 10px;
     max-width: 600px;
-    background-color: #fff;
+    background-color: #f1c227;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -45,29 +52,43 @@ body {
     text-align: center;
 }
 
-.main__input {
+            /* inputs t text */
+.main__input,
+.main__textarea {
     width: calc(100% - 22px);
     padding: 10px;
     margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 3px;
+    font-size: 16px;
+    background-color: #ffffff;
 }
 
+.main__input:focus,
+.main__textarea:focus {
+    border-color: #01257D;
+    box-shadow: 0 0 5px rgba(1, 37, 125, 0.5);
+    outline: none;
+}
+
+                                /* botpn */
 .main__button {
     padding: 10px;
     margin-top: 10px;
     width: 100%;
-    background-color: #007BFF;
-    color: #fff;
+    background-color: #01257D;
+    color: #ffffff;
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 .main__button:hover {
-    background-color: #0056b3;
+    background-color: #0635ac;
 }
 
+                        /* listas */
 .main__list {
     list-style-type: none;
     padding: 0;
