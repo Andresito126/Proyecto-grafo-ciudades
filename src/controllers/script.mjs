@@ -13,6 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const startPlaceInput = document.querySelector('.main__input--start-place');
     const showPlacesButton = document.querySelector('.main__button--show-places');
 
+    const startRouteInput = document.querySelector('.main__input--start-route');
+    const showRoutesButton = document.querySelector('.main__button--show-routes');
+    const routesList = document.querySelector('.main__list--routes');
+
+
     function updatePlacesList(content) {
         const li = document.createElement('li');
         li.textContent = content;
@@ -60,4 +65,50 @@ document.addEventListener('DOMContentLoaded', () => {
         
         grafo.dfs(startVertex, dfsCallback);
     });
+
+    showRoutesButton.addEventListener('click', () => {
+        routesList.innerHTML = '';
+
+        const startVertex = startRouteInput.value.trim();
+        console.log(`Inicio Dijkstra: ${startVertex}`);
+
+        if (!grafo.hasVertex(startVertex)) {
+            alert("No existe ese vértice en el grafo");
+            return;
+        }
+
+        const result = grafo.dijkstra(startVertex);
+        console.log(`Dijkstra: ${result}`);
+        updateRoutesList(result);
+    });
+
+    function updateRoutesList(routes) {
+        routesList.innerHTML = ''; 
+        for (const [vertex, distance] of Object.entries(routes)) {
+            const li = document.createElement('li');
+            li.textContent = `${vertex} (Distancia: ${distance})`;
+            routesList.appendChild(li);
+        }
+    }
+
 });
+    /*
+    grafo.addV("v1")
+    grafo.addV("v2")
+    grafo.addV("v3")
+    grafo.addV("v4")
+    grafo.addV("v5")
+    grafo.addV("v6")
+
+    grafo.addConexion("v1","v2",2)
+    grafo.addConexion("v1","v6",3)
+    grafo.addConexion("v2","v3",1)
+    grafo.addConexion("v3","v6",5)
+    grafo.addConexion("v3","v5",3)
+    grafo.addConexion("v3","v4",8)
+    grafo.addConexion("v6","v5",6)
+    grafo.addConexion("v5","v4",11)
+
+    grafo.dijkstra("v6");
+    */
+

@@ -5,3 +5,5 @@ const grafo = new Graph()
 export{
     grafo
 }
+
+
